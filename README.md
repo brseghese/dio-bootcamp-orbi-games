@@ -1,3 +1,3 @@
-# Bootcamp Órbi Games Web Developer
+# Bootcamp Órbi Web Games Developer 🎮
 
 - Jogo da Velha
