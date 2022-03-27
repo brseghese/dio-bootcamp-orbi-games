@@ -1,0 +1,48 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #111;
+}
+
+#game-area {
+  background-image: url("../assets/images/space.png");
+  height: 600px;
+  width: 800px;
+}
+
+#player {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  left: 20px;
+  top: 250px;
+  background-image: url("../assets/images/hero.png");
+}
+
+.animationPlayer {
+  background-image: url("../assets/images/hero.png");
+  animation: play 0.1s steps(2) infinite;
+}
+
+@keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -200px;
+  }
+}
+
+.laser {
+  position: relative;
+  width: 70px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("../assets/images/laser.png");
+}
