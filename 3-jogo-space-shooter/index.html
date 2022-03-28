@@ -4,14 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <title>Space Shooter</title>
 </head>
 
 <body>
-  <div id="game-area">
+  <div id="gameStart">
+    <div class="mensagem">
+      <p>Space Shooter</p>
+      <p style="font-size: 1rem">Impedir a passagem dos Aliens!</p>
+      <button id="start" onclick="startGame()">Start Game</button>
+    </div>
+  </div>
+
+  <div id="gameArea">
     <div id="player" class="animationPlayer"></div>
   </div>
+
+  <div id="gameOver">
+    <div class="mensagem">
+      <p id="resultado">Game Over! Tente novamente!</p>
+      <button id="restart" onclick="restart()">Restart</button>
+    </div>
+  </div>
+
+  <audio src="./assets/sounds/disparo1.mp3" preload="auto" id="somDisparo"></audio>
+  <audio src="./assets/sounds/explosao.mp3" preload="auto" id="somExplosao"></audio>
+  <audio src="./assets/sounds/musica_fundo1.mp3" preload="auto" id="musica"></audio>
 
   <script src="./js/script.js"></script>
 </body>

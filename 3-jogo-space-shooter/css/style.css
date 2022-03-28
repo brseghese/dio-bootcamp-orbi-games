@@ -6,14 +6,74 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Righteous", sans-serif;
   background-color: #111;
 }
 
-#game-area {
+#gameStart {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  font-size: 2rem;
+  display: flex; /* none play game */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  z-index: 100;
+}
+
+.mensagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #222;
+  text-align: center;
+}
+
+#start {
+  font-family: "Righteous", sans-serif;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: rgb(238, 215, 12);
+  border: none;
+  border-radius: 5px;
+}
+
+#gameOver {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  color: #ffffff;
+  font-size: 2rem;
+  display: none; /* flex sobrepõe a tela */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+}
+
+#restart {
+  font-family: "Righteous", sans-serif;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: rgb(238, 215, 12);
+  border: none;
+  border-radius: 5px;
+}
+
+#gameArea {
   background-image: url("../assets/images/space.png");
   height: 600px;
   width: 800px;
+  position: relative;
 }
 
 #player {
@@ -23,6 +83,7 @@ body {
   left: 20px;
   top: 250px;
   background-image: url("../assets/images/hero.png");
+  display: none;
 }
 
 .animationPlayer {
@@ -43,6 +104,32 @@ body {
   position: relative;
   width: 70px;
   height: 20px;
-  display: inline-block;
   background-image: url("../assets/images/laser.png");
+}
+
+.alien {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+}
+
+.explosion {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/images/explosion.png");
+}
+
+.animationExplosion {
+  background-image: url("../assets/images/explosion.png");
+  animation: playExplosion 1s steps(12) infinite;
+}
+
+@keyframes playExplosion {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -1200px;
+  }
 }
